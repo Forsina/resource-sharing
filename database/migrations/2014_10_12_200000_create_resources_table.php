@@ -11,7 +11,7 @@ class CreateResourcesTable extends Migration
      *
      * @return void
      */
-    public function up()	//ресурси за табела
+    public function up()
     {
         Schema::create('resources', function (Blueprint $table) {
             $table->increments('id');

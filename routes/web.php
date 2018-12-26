@@ -10,6 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('resources/{tags}', 'Controllers\RetrievingRecords@records');
+
 
 Route::get('/', function () {
     return view('welcome');

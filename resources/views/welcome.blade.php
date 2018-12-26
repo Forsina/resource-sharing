@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                   Welcome Bitches :)
+                   Welcome Bi***es :)
                 </div>
 
                 <div class="links">
