@@ -11,10 +11,9 @@
 |
 */
 
-/*Route::get('resources_ids/{id}', function($id) {
-    return ResourcesId::find($id);
-});
-*/
+//Route::get('resources_ids/{id}', function($id) {return ResourcesId::find($id);});
+
+//Route::get('articles/{id}', 'ArticleController@show');
 Route::get('resources_ids/{resource}', 'ResourcesIdController@show');
 
 
