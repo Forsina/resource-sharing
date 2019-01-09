@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('resources/{tags}', 'Controllers\RetrievingRecords@records');
+Route::get('resources/{tags}', 'Controllers\ResourcesController@index')->where(['tags' => '^[ ,]*(?:[a-zA-Z]+(?:[ ,]+[a-zA-Z0-9]+){0,})?[ ,]*$']);
 
 
 Route::get('/', function () {
