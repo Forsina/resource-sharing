@@ -10,6 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/*Route::get('resources_ids/{id}', function($id) {
+    return ResourcesId::find($id);
+});
+*/
+Route::get('resources_ids/{resource}', 'ResourcesIdController@show');
+
+
 Route::get('resources/{tags}', 'Controllers\ResourcesController@index')->where(['tags' => '^[ ,]*(?:[a-zA-Z]+(?:[ ,]+[a-zA-Z0-9]+){0,})?[ ,]*$']);
 
 
