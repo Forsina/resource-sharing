@@ -11,19 +11,14 @@
 |
 */
 
-//Route::get('resources_ids/{id}', function($id) {return ResourcesId::find($id);});
+Route::get('resources/{tags?}', 'ResourcesController@index');
 
-//Route::get('articles/{id}', 'ArticleController@show');
-Route::get('resources_ids/{resource}', 'ResourcesIdController@show');
+Auth::routes();
 
+Route::get('resources/show/{id}', 'ResourcesController@show');
 
-Route::get('resources/{tags}', 'Controllers\ResourcesController@index')->where(['tags' => '^[ ,]*(?:[a-zA-Z]+(?:[ ,]+[a-zA-Z0-9]+){0,})?[ ,]*$']);
-
+Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
