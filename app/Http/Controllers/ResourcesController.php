@@ -17,10 +17,15 @@ class ResourcesController extends Controller
 		return Resources::all()->toJson();
 	}
 
+	// public function store(Request $request){
+
+	// 	Resources::create($request->all());
+
+	// }
+
 
 	public function show(Request $request, $id)
     {
-    	
         return Resources::find($id)->toJson();
     }
     
