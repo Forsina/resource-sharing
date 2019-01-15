@@ -35,7 +35,8 @@
                 </script>
             </div>
             <div class="modal-body">
-                <form method="post">
+                <form method="post" action="">
+                    {{ csrf_field() }} <!-- we are using a Laravel helper to make sure our form has unique token to prevent cross site forgery. -->
                     <div>
                         <textarea cols="80" rows="10" id="content" name="content"></textarea>
                         <script type="text/javascript">
@@ -73,10 +74,9 @@
             </script>
             <script>
                 $(document).ready(function () {
-
                     $("#ci").click(function () {
-                        $('#chip-input').prop("disabled", false);
-                        $('#chip-input').focus();
+                    $('#chip-input').prop("disabled", false);
+                    $('#chip-input').focus();
                     });
                 });
             </script>

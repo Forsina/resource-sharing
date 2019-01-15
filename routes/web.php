@@ -20,6 +20,13 @@ Auth::routes();
 
 Route::get('resources/show/{id}', 'ResourcesController@show');
 
+Route::get('/demo/editModal', 'ResourcesController@getModalForm')->name('editModal');
+
+// Route::get("layouts/partials/editModal", function()
+// {
+//    return View::make("layouts/partials/editModal");
+// });
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', function () {
