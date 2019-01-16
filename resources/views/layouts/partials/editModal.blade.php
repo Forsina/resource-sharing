@@ -5,7 +5,7 @@
                 <div class="col-md-8">
                     <form class="navbar-form navbar-left" role="search">
                         <div class="form-group">
-                            <input autofocus type="text" class="form-control form-title align-content-center"
+                            <input for="title"autofocus type="text" class="form-control form-title align-content-center"
                                    id="wh" placeholder="Post Title ">
                         </div>
                     </form>
@@ -38,7 +38,7 @@
                 <form method="post" action="">
                     {{ csrf_field() }} <!-- we are using a Laravel helper to make sure our form has unique token to prevent cross site forgery. -->
                     <div>
-                        <textarea cols="80" rows="10" id="content" name="content"></textarea>
+                        <textarea for="content" cols="80" rows="10" id="content" name="content"></textarea>
                         <script type="text/javascript">
                             CKEDITOR.replace('content');
                         </script>
@@ -47,7 +47,7 @@
             </div>
             <form class="navbar-form navbar-left" role="search">
                 <div class="form-group">
-                    <input type="text" class="form-control align-content-center" style="color: #005cbf"
+                    <input for="url" type="text" class="form-control align-content-center" style="color: #005cbf"
                            placeholder="Url">
                 </div>
             </form>
@@ -62,7 +62,7 @@
                             <!--<div class="chip">NL78545645
                                 <span class="closebtn" >&times;</span>
                             </div>-->
-                            <input type="text" class="chip-input" id="chip-input">
+                            <input for="tags" type="text" class="chip-input" id="chip-input">
                         </div>
                     </div>
                 </div>
@@ -92,10 +92,21 @@
                         <a href="#" style="color: #16a085">Start Bootstrap</a>
                     </div>
                     <div class="com-md-2">
-                        <button type="button" class="btn btn-info" data-dismiss="modal"
-                        >Post
-                        </button>
+                        <a href="{{ route('editModal') }}">
+                            <button type="button" class="btn btn-info" data-dismiss="modal">
+                                Post
+                            </button>
+                        </a>
                     </div>
+                            @if(Session::has('success'))
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-md-offset-4 col-sm-offset-3">
+                            <div id="message" class="alert alert-success">
+                                {{ Session::get('success') }}
+                            </div>
+                        </div>
+                    </div>
+                @endif
                 </div>
             </div>
         </div>
