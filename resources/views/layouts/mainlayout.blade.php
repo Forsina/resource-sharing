@@ -4,22 +4,19 @@
  
  <head>
  
-   @include('layouts.partials.head')
+  	@include('layouts.partials.head')
  
  </head>
  
  <body>
  
+	@include('layouts.partials.nav')
  
-@include('layouts.partials.nav')
+	@yield('content')
  
-
+	@include('layouts.partials.footer')
  
-@yield('content')
- 
-@include('layouts.partials.footer')
- 
-@include('layouts.partials.footer-scripts')
+	@include('layouts.partials.footer-scripts')
  
  </body>
  

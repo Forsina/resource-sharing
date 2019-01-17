@@ -1,5 +1,5 @@
 <!-- Blog Post -->
-<div class="card mb-4">
+<!-- <div class="card mb-4">
     <div class="card-body card h-100">
         <div class="row">
             <div class="col-sm-8 col-md-8 col-lg-9">
@@ -16,8 +16,8 @@
             soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus
             possimus, veniam magni quis!</p>
     </div>
-    <div class="card-footer text-muted"> <!-- <div class="card-footer text-muted d-none d-sm-block"> -->
+    <div class="card-footer text-muted d-none d-sm-block">
         Posted on January 1, 2017 by
         <a href="#">Start Bootstrap</a>
     </div>
-</div>
+</div> -->
