@@ -16,8 +16,6 @@ Auth::routes();
 
 Route::get('resources/show/{id}', 'ResourcesController@show');
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 Route::get('/', function () {
     return view('demo');
 });

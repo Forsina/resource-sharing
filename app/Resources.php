@@ -8,5 +8,5 @@ class Resources extends Model
 {
     protected $resources = ['title', 'content', 'url', 'tags', 'user_id'];
 
-    // protected $fillable = ['title', 'content', 'url', 'tags'];
+    protected $fillable = ['title', 'content', 'url', 'tags'];
 }
